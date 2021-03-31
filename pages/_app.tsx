@@ -1,8 +1,11 @@
 import "../styles/globals.css";
 import Head from "next/head";
 import Layout from "../components/Layout";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
+  const { pathname } = useRouter();
+
   return (
     <>
       <Head>
@@ -15,11 +18,15 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
 
-      <Layout>
-        <div className="w-4/5 h-auto p-8 mb-8 mr-8 bg-white rounded-xl">
-          <Component {...pageProps} />
-        </div>
-      </Layout>
+      {pathname === "/login" || pathname === "/register" ? (
+        <Component {...pageProps} />
+      ) : (
+        <Layout>
+          <div className="w-4/5 h-auto p-8 mb-8 mr-8 bg-white rounded-xl">
+            <Component {...pageProps} />
+          </div>
+        </Layout>
+      )}
     </>
   );
 }
