@@ -9,7 +9,7 @@ module.exports = {
       colors: {
         primary: "var(--color-primary)",
         primaryD: "var(--color-primary-darker)",
-        priumaryL: "var(--color-primary-ligther)",
+        primaryL: "var(--color-primary-ligther)",
         secondary: "var(--color-secondary)",
         secondaryL: "var(--color-secondary-ligther)",
       },
@@ -18,5 +18,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

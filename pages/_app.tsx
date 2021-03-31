@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <Layout>
-        <div className="w-5/6 h-auto p-8 mb-8 mr-8 bg-white rounded-xl">
+        <div className="w-4/5 h-auto p-8 mb-8 mr-8 bg-white rounded-xl">
           <Component {...pageProps} />
         </div>
       </Layout>

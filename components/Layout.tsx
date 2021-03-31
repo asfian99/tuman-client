@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar";
 
 function Layout({ children }) {
   return (
-    <div className="text-gray-800 bg-gray-200 font-inter">
+    <div className="text-gray-800 bg-gray-100 font-inter">
       <Navbar />
       <div className="flex flex-row justify-between h-[90vh]">
         <Sidebar />
