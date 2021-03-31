@@ -3,7 +3,7 @@ import { MoonIcon, BellIcon } from "@heroicons/react/outline";
 
 function Navbar() {
   return (
-    <div className="sticky top-0 h-[10vh]">
+    <div className="sticky top-0 h-[10vh] bg-gray-100 px-8">
       <div className="container flex flex-row items-center justify-between h-full mx-auto">
         {/* logo */}
         <div className="flex flex-row items-center">

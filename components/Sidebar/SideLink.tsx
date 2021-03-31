@@ -12,7 +12,7 @@ function SideLink({ title, slug }) {
         <h1
           className={clsx(
             "w-full px-4 py-4 font-semibold cursor-pointer rounded-xl",
-            slug === pathname ? "bg-primaryL text-primaryD" : "text-gray-500 "
+            slug === pathname ? "bg-primary text-white" : "text-gray-500 "
           )}
         >
           {title}

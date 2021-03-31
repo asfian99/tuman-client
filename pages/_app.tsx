@@ -22,9 +22,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       ) : (
         <Layout>
-          <div className="w-4/5 h-auto p-8 mb-8 mr-8 bg-white rounded-xl">
-            <Component {...pageProps} />
-          </div>
+          <Component {...pageProps} />
         </Layout>
       )}
     </>
