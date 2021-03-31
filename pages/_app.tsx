@@ -1,9 +1,12 @@
 import "../styles/globals.css";
 import Head from "next/head";
 import NProgress from "nprogress";
+import { QueryClient, QueryClientProvider } from "react-query";
 import Router, { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import HTMLHead from "../components/HTMLHead";
+
+const queryClient = new QueryClient();
 
 Router.events.on("routeChangeStart", (url: string) => {
   console.log(`Loading: ${url}`);
@@ -16,7 +19,7 @@ function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
 
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <Head>
         <HTMLHead />
       </Head>
@@ -28,7 +31,7 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </Layout>
       )}
-    </>
+    </QueryClientProvider>
   );
 }
 
