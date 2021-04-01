@@ -3,6 +3,7 @@ import { useMutation } from "react-query";
 import axios from "axios";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import clsx from "clsx";
 
 interface LoginProps {
   email?: string;
@@ -43,7 +44,7 @@ function Login() {
         <p className="text-5xl">image</p>
       </div>
       <div className="flex flex-col items-center w-1/2">
-        <h1 className="mb-2 text-2xl font-bold text-primaryD">Tuman</h1>
+        <h1 className="mb-2 text-2xl font-bold text-primary600">Tuman</h1>
         <p className="mb-12 text-lg font-semibold text-gray-600">
           Login to your Tuman account
         </p>
@@ -80,9 +81,14 @@ function Login() {
           </div>
           <button
             type="submit"
-            className="w-full py-3 text-lg font-semibold text-white rounded-lg bg-primary hover:bg-primaryD"
+            className={clsx(
+              "w-full py-3 text-lg font-semibold text-white rounded-lg ",
+              mutation.isLoading
+                ? "bg-primary400"
+                : "bg-primary hover:bg-primary600"
+            )}
           >
-            Log In
+            {mutation.isLoading ? "Loading..." : "Log In"}
           </button>
         </form>
       </div>

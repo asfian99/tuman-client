@@ -8,8 +8,11 @@ module.exports = {
       },
       colors: {
         primary: "var(--color-primary)",
-        primaryD: "var(--color-primary-darker)",
-        primaryL: "var(--color-primary-ligther)",
+        primary100: "var(--color-primary-100)",
+        primary200: "var(--color-primary-200)",
+        primary300: "var(--color-primary-300)",
+        primary400: "var(--color-primary-400)",
+        primary600: "var(--color-primary-600)",
         secondary: "var(--color-secondary)",
         secondaryL: "var(--color-secondary-ligther)",
       },
