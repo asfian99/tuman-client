@@ -3,7 +3,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { useRouter } from "next/router";
 
-function SideLink({ title, slug }) {
+function SideLink({ title, slug, setShowNav }) {
   const { pathname } = useRouter();
 
   return (
@@ -16,6 +16,7 @@ function SideLink({ title, slug }) {
               ? "bg-primary text-white hover:text-gray-100"
               : "text-gray-500 hover:text-gray-700"
           )}
+          onClick={() => setShowNav(false)}
         >
           {title}
         </h1>
