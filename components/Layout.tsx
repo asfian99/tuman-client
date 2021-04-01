@@ -11,9 +11,9 @@ function Layout({ children }) {
         {/* sidebar */}
         <Sidebar />
         {/* content */}
-        <div className="w-[80vw] h-auto overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 p-8 mb-8 ml-[20vw] mr-8 bg-white justify-self-end rounded-xl scrollbar-thumb-rounded">
+        <main className="w-[80vw] h-auto overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 p-8 mb-8 ml-[20vw] mr-8 bg-white justify-self-end rounded-xl scrollbar-thumb-rounded">
           {children}
-        </div>
+        </main>
       </div>
     </div>
   );

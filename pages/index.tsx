@@ -2,8 +2,8 @@ import Head from "next/head";
 
 export default function Home() {
   return (
-    <div>
+    <article>
       <h1>Dashboard</h1>
-    </div>
+    </article>
   );
 }

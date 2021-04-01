@@ -13,7 +13,7 @@ interface LoginProps {
 function Login() {
   // Fungsi untuk mutation
   const mutation = useMutation((loginData: LoginProps) =>
-    axios.post(`http://localhost:1337/auth/local`, loginData)
+    axios.post(`${process.env.API_URL}/auth/local`, loginData)
   );
 
   // Handle Login
@@ -38,7 +38,7 @@ function Login() {
   });
 
   return (
-    <div className="flex flex-row items-center justify-around min-h-screen mx-16">
+    <main className="flex flex-row items-center justify-around min-h-screen mx-16">
       <div className="flex justify-center w-1/2">
         <p className="text-5xl">image</p>
       </div>
@@ -86,7 +86,7 @@ function Login() {
           </button>
         </form>
       </div>
-    </div>
+    </main>
   );
 }
 
